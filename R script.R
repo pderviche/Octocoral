@@ -1,5 +1,5 @@
 #Set working directory
-setwd("C:/Users/patri/OneDrive/Documentos/PGSISCO/Review/MABI/Menegotto/Variables")
+setwd("C:/Users/patri/OneDrive/Documentos/PGSISCO/Review/MABI/Variables")
 
 #Package
 library(ggplot2)
@@ -33,7 +33,7 @@ summary(Rc.azoo)
 
 
 #Creating the figure
-legend <- expression(Respiration~carbon~demand~(µgC~gAFDW^-1~hour^-1))
+legend <- expression(Respiration~carbon~demand~(ÂµgC~gAFDW^-1~hour^-1))
 Fig.Rc <-ggplot(data=Rc, aes(x = reorder(Species,-Rmean), y = Rmean, fill=Symbiont))+
   geom_bar(stat="identity") +     
   scale_fill_manual(values=c("steelblue","lightgreen"), name=" ")+
@@ -77,7 +77,7 @@ Hc.azoo <- filter(Hc, Symbiont == "Azooxanthellate")
 summary(Hc.azoo)
 
 #Creating the figure
-legend <- expression(Ingestion~rates~(µgC~gAFDW^-1~hour^-1))
+legend <- expression(Ingestion~rates~(ÂµgC~gAFDW^-1~hour^-1))
 Fig.Hc<-ggplot(data=Hc, aes(x = reorder(Species,-Hmean), y = Hmean, fill=Symbiont))+
   geom_bar(stat="identity") +     
   scale_fill_manual(values=c("steelblue","lightgreen"), name=" ")+
@@ -159,7 +159,7 @@ summary(Pc)
 #n = 41
 
 #Creating the figure
-legend <- expression(Photosynthetic~carbon~input~(µgC~gAFDW^-1~hour^-1))
+legend <- expression(Photosynthetic~carbon~input~(ÂµgC~gAFDW^-1~hour^-1))
 Fig.Pc <-ggplot(data=Pc, aes(x = reorder(Species,-Pmean), y = Pmean))+
   geom_bar(stat="identity",fill="lightgreen") + 
   coord_flip()+
@@ -239,7 +239,7 @@ summary(SfG.azoo)
 #Azooxanthellate species: 6
 
 #Creating the figure
-legend <- expression(Carbon~available~"for"~growth~and~reproduction~(µgC~gAFDW^-1~hour^-1))
+legend <- expression(Carbon~available~"for"~growth~and~reproduction~(ÂµgC~gAFDW^-1~hour^-1))
 Fig.SfG<-ggplot(data=SfG, aes(x = reorder(Species,-SfG), y = SfG, fill=Symbiont))+
   geom_bar(stat="identity") + 
   scale_fill_manual(values=c("steelblue","lightgreen"), name=" ")+
