@@ -6,4 +6,4 @@ Patrick Derviche, André Menegotto, Paulo Lana
 
 The R script 'Synthesis&Analyses' contains the figures and statistical analysis made in the manuscript.
 
-The file data.csv is the raw data used for the analysis. The other files inside the "Variables" folder are derived from it.
+The file data.csv is the raw data. The other files inside the "Variables" folder are derived from it used for the analysis.
