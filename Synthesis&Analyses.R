@@ -377,7 +377,7 @@ rm(list = ls())
 #1.3. contribution of heterotrophically acquired carbon to octocoral respiration (CHAR)
 #Download data
 char <- read.csv(file="CHARSelected.csv",header=TRUE,sep=";",dec=".")
-char <- na.omit(char)
+char <- char[!is.na(char$selected),]
 
 #Shapiro-Wilk's test
 shapiro.test(char$CHARmean) #p-value < 0.05, we can not assume the normality
