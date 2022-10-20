@@ -112,7 +112,7 @@ summary(Rc)
 mean(Rc$Rmean)
 sd(Rc$Rmean)
 #n = 60
-#Rc = 187.5 ? 188.5 ?g C g AFDW-1 hour-1
+#Rc = 187.5 +- 188.5 ug C g AFDW-1 hour-1
 
 Rc.zoo <- filter(Rc, Symbiont == "Zooxanthellate")
 summary(Rc.zoo)
@@ -123,7 +123,7 @@ summary(Rc.azoo)
 #Azooxanthellate species:12
 
 #Creating the figure
-legend <- expression(Respiration~carbon~demand~(?g~C~g~AFDW^-1~hour^-1))
+legend <- expression(Respiration~carbon~demand~(ug~C~g~AFDW^-1~hour^-1))
 Fig.Rc <-ggplot(data=Rc, aes(x = reorder(UsedName,-Rmean), y = Rmean, fill=Symbiont))+
   geom_bar(stat="identity") +     
   scale_fill_manual(values=c("steelblue","lightgreen"), name=" ")+
@@ -145,24 +145,24 @@ summary(Hc)
 mean(Hc$Hmean)
 sd(Hc$Hmean)
 #n = 34
-#80.6 ? 184.8 ?g C g AFDW-1 hour-1
+#80.6 +- 184.8 ug C g AFDW-1 hour-1
 
 Hc.zoo <- filter(Hc, Symbiont == "Zooxanthellate")
 summary(Hc.zoo)
 mean(Hc.zoo$Hmean)
 sd(Hc.zoo$Hmean)
 #Zooxanthellate species: 23
-#19.1 ? 286.8 ?g C g AFDW-1 hour-1
+#19.1 +- 40.2 ug C g AFDW-1 hour-1
 
 Hc.azoo <- filter(Hc, Symbiont == "Azooxanthellate")
 summary(Hc.azoo)
 mean(Hc.azoo$Hmean)
 sd(Hc.azoo$Hmean)
 #Azooxanthellate species: 23
-#209.0 ? 40.2 ?g C g AFDW-1 hour-1
+#209.0 +- 286.8 ug C g AFDW-1 hour-1
 
 #Creating the figure
-legend <- expression(Ingestion~rates~(?g~C~g~AFDW^-1~hour^-1))
+legend <- expression(Ingestion~rates~(ug~C~g~AFDW^-1~hour^-1))
 Fig.Hc<-ggplot(data=Hc, aes(x = reorder(UsedName,-Hmean), y = Hmean, fill=Symbiont))+
   geom_bar(stat="identity") +     
   scale_fill_manual(values=c("steelblue","lightgreen"), name=" ")+
@@ -183,21 +183,21 @@ summary(CHAR)
 mean(CHAR$CHARmean)
 sd(CHAR$CHARmean)
 #n = 31
-#72.8 ? 116.0 %
+#72.8 +- 116.0 %
 
 CHAR.zoo <- filter(CHAR, Symbiont == "Zooxanthellate")
 summary(CHAR.zoo)
 mean(CHAR.zoo$CHARmean)
 sd(CHAR.zoo$CHARmean)
 #Zooxanthellate species: 21
-#30.0 ? 32.6 %
+#30.0 +- 32.6 %
 
 CHAR.azoo <- filter(CHAR, Symbiont == "Azooxanthellate")
 summary(CHAR.azoo)
 mean(CHAR.azoo$CHARmean)
 sd(CHAR.azoo$CHARmean)
 #Azooxanthellate species: 10
-#162.8 ? 171.0 %
+#162.8 +- 171.0 %
 
 #Creating the figure
 Fig.CHAR<-ggplot(data=CHAR, aes(x = reorder(UsedName,-CHARmean), y = CHARmean, fill=Symbiont))+
@@ -221,10 +221,10 @@ summary(Pc)
 mean(Pc$Pmean)
 sd(Pc$Pmean)
 #n = 41
-#276.7 ? 278.1 ?g C g AFDW-1 hour-1
+#276.7 +- 278.1 ug C g AFDW-1 hour-1
 
 #Creating the figure
-legend <- expression(Photosynthetic~carbon~input~(?g~C~g~AFDW^-1~hour^-1))
+legend <- expression(Photosynthetic~carbon~input~(ug~C~g~AFDW^-1~hour^-1))
 Fig.Pc <-ggplot(data=Pc, aes(x = reorder(UsedName,-Pmean), y = Pmean))+
   geom_bar(stat="identity",fill="lightgreen") + 
   coord_flip()+
@@ -244,7 +244,7 @@ summary(CZAR)
 mean(CZAR$CZARmean)
 sd(CZAR$CZARmean)
 #n = 62
-#156.7 ? 113.9 %
+#156.7 +- 113.9 %
 
 #Creating the figure
 Fig.CZAR<-ggplot(data=CZAR, aes(x = reorder(UsedName,-CZARmean), y = CZARmean))+
@@ -267,24 +267,24 @@ summary(SfG)
 mean(SfG$SfG)
 sd(SfG$SfG)
 #n = 24
-#209.0 ? 40.2 ?g C g AFDW-1 hour-1
+#209.0 +- 40.2 ug C g AFDW-1 hour-1
 
 SfG.zoo <- filter(SfG, Symbiont == "Zooxanthellate")
 summary(SfG.zoo)
 mean(SfG.zoo$SfG)
 sd(SfG.zoo$SfG)
 #Zooxanthellate species: 18
-#23.2 ? 28.2 ?g C g AFDW-1 hour-1
+#23.2 +- 28.2 ug C g AFDW-1 hour-1
 
 SfG.azoo <- filter(SfG, Symbiont == "Azooxanthellate")
 summary(SfG.azoo)
 mean(SfG.azoo$SfG)
 sd(SfG.azoo$SfG)
 #Azooxanthellate species: 6
-#209.0 ? 40.2 ?g C g AFDW-1 hour-1
+#181.2 +- 324.7 ug C g AFDW-1 hour-1
 
 #Creating the figure
-legend <- expression(Carbon~available~"for"~growth~and~reproduction~(?g~C~g~AFDW^-1~hour^-1))
+legend <- expression(Carbon~available~"for"~growth~and~reproduction~(ug~C~g~AFDW^-1~hour^-1))
 Fig.SfG<-ggplot(data=SfG, aes(x = reorder(UsedName,-SfG), y = SfG, fill=Symbiont))+
   geom_bar(stat="identity") + 
   scale_fill_manual(values=c("steelblue","lightgreen"), name=" ")+
