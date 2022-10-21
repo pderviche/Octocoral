@@ -178,7 +178,7 @@ rm(list=ls(all=TRUE))
 
 #Fig 4.CHAR - Contribution of heterotrophically acquired carbon to animal respiration
 CHAR <- read.csv(file="CHARselected.csv",header=TRUE,sep=";",dec=".")
-CHAR <-na.omit(CHAR)
+CHAR <- CHAR[!is.na(CHAR$selected),]
 summary(CHAR)
 mean(CHAR$CHARmean)
 sd(CHAR$CHARmean)
@@ -190,7 +190,7 @@ summary(CHAR.zoo)
 mean(CHAR.zoo$CHARmean)
 sd(CHAR.zoo$CHARmean)
 #Zooxanthellate species: 21
-#30.0 +- 32.6 %
+#28.7 +- 32.3 %
 
 CHAR.azoo <- filter(CHAR, Symbiont == "Azooxanthellate")
 summary(CHAR.azoo)
